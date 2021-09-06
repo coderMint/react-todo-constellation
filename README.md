@@ -1,3 +1,14 @@
+# How to run the app
+
+# High level architecture
+
+### Folder structure choice 
+Choice of 'flat folder structure' chosen over 'App feature split' in terms of how small and specific the scope of the app is right now. 
+
+# Edge Cases 
+
+#
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
