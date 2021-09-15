@@ -12,11 +12,11 @@ Following component hierarchy:
 * EditableTodoListComponent
 	- TodoViewSelectionRowComponent
 	- ViewTodosAndAddComponent
-		-- AddTodoButtonComponent (** this is not in the initial design; decided to add to be more modular and 'react' like)
-		-- TodoListComponent (aggregates and presents all todo items)
-			--- TodoItemComponent (shows checkbox and text together)
-				---- TodoItemTextComponent (added this to break todo item dow further in terms of single responsibility)
-				---- TodoItemCheckboxComponent
+		- AddTodoButtonComponent (** this is not in the initial design; decided to add to be more modular and 'react' like)
+		- TodoListComponent (aggregates and presents all todo items)
+			- TodoItemComponent (shows checkbox and text together)
+				- TodoItemTextComponent (added this to break todo item dow further in terms of single responsibility)
+				- TodoItemCheckboxComponent
 
 # Edge Cases 
 
