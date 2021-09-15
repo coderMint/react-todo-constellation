@@ -5,6 +5,9 @@
 ### Folder structure choice 
 Choice of 'flat folder structure' chosen over 'App feature split' in terms of how small and specific the scope of the app is right now. 
 
+### Component Level breakdown (Visual) + Hierarchy 
+![title](images/TodoApp-React-ComponentLevelBreakdown_Sept14th2021.jpg)
+
 # Edge Cases 
 
 #
