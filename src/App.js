@@ -1,7 +1,7 @@
 // template specific deps
 import './App.scss';
-import Todos from './components/Todos'
 import TodoItemComponent from './components/TodoItemComponent/TodoItemComponent';
+import AddTodoButtonComponent from './components/AddTodoButtonComponent/AddTodoButtonComponent';
 
 // db imports 
 import db from './firebase-config';
@@ -9,8 +9,8 @@ import { GoogleAuthProvider, getAuth, signInWithRedirect, getRedirectResult, sig
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 // ui imports 
-import { AddCircleOutlineRounded } from '@material-ui/icons';
-import { Button, TextField, Container } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import { Container } from '@material-ui/core';
 
 const auth = getAuth();
 
@@ -68,7 +68,14 @@ const App = () => {
           Add Todo
       </Button> */}
 
-      <TodoItemComponent />
+        <Box display="flex" 
+          justifyContent="center" 
+          alignItems="center"
+          flexWrap='wrap'
+          p={1}>
+          <TodoItemComponent />
+          <AddTodoButtonComponent />
+        </Box>
 
       </form>
 

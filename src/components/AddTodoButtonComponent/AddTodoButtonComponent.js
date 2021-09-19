@@ -1,17 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './AddTodoButtonComponent.module.scss';
+
+import IconButton from '@mui/material/IconButton';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const AddTodoButtonComponent = () => {
   return (
     <div className={styles.AddTodoButtonComponent} data-testid="AddTodoButtonComponent">
-      AddTodoButtonComponent Component
+      <IconButton aria-label="add new todo">
+        <AddCircleIcon />
+      </IconButton>
     </div>
   );
 };
-
-AddTodoButtonComponent.propTypes = {};
-
-AddTodoButtonComponent.defaultProps = {};
 
 export default AddTodoButtonComponent;
