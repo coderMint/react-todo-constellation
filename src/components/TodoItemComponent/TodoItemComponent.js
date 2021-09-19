@@ -4,6 +4,8 @@ import styles from './TodoItemComponent.module.scss';
 import Box from '@material-ui/core/Box';
 import Checkbox from "@material-ui/core/Checkbox";
 
+// Purpose: To render one todo.
+
 const TodoItemComponent = () => {
   
   //TODO: Replace this later with the state from redux about the item being un/checked fetched from db
