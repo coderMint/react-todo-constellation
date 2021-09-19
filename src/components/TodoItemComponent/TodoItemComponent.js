@@ -1,29 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './TodoItemComponent.module.scss';
 
-import TodoCheckboxComponent from '../TodoCheckboxComponent/TodoCheckboxComponent';
-import TodoItemTextComponent from '../TodoItemTextComponent/TodoItemTextComponent';
-
 import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
+import Checkbox from "@material-ui/core/Checkbox";
 
 const TodoItemComponent = () => {
+  
+  //TODO: Replace this later with the state from redux about the item being un/checked fetched from db
+  //TODO: text content rendered between <span> will become a for loop
 
-  const handleClick = (event) => {
-    
+  // useState to update todo entry styles
+  const [checkedState, setChecked] = useState(false);
+
+  const handleChange = (event) => {
+    return setChecked(event.target.checked);
   }
 
   return (
     <div className={styles.TodoItemComponent} data-testid="TodoItemComponent">
-      <Button onClick={handleClick}>
         <Box display="flex" 
           justifyContent="center" 
           alignItems="center"
           p={1}>
-          <TodoCheckboxComponent />
-          <TodoItemTextComponent todoText="complete todo app" />
+
+          <Checkbox
+            checked={checkedState}
+            onChange={handleChange}
+            inputProps={{ 'aria-label': 'primary checkbox' }}
+          />
+          
+          {/* note content */}
+          <span 
+            className={checkedState == true ? styles.checked : null}
+            onClick={() => setChecked(!checkedState)}>
+            complete todo app
+          </span>
+          
         </Box>
-      </Button>
     </div>
   );
 };
