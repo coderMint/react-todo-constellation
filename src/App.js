@@ -1,6 +1,6 @@
 // template specific deps
 import './App.scss';
-import TodoItemComponent from './components/TodoItemComponent/TodoItemComponent';
+import TodoListComponent from './components/TodoListComponent/TodoListComponent';
 import AddTodoButtonComponent from './components/AddTodoButtonComponent/AddTodoButtonComponent';
 
 // db imports 
@@ -43,37 +43,12 @@ const App = () => {
 
       <form noValidate>
 
-        {/* <TextField
-          variant="outlined"
-          margin="normal"
-          required
-          fullWidth
-          id="todo"
-          label="Enter ToDo"
-          name="todo"
-          autoFocus
-          value={input}
-          onChange={event => setInput(event.target.value)}
-        /> */}
-
-        {/* <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          onClick={addTodo}
-          disabled={!input}
-          startIcon={<AddCircleOutlineRounded />}
-        >
-          Add Todo
-      </Button> */}
-
         <Box display="flex" 
           justifyContent="center" 
           alignItems="center"
           flexWrap='wrap'
           p={1}>
-          <TodoItemComponent />
+          <TodoListComponent />
           <AddTodoButtonComponent />
         </Box>
 

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import styles from './TodoItemComponent.module.scss';
 
-import Box from '@material-ui/core/Box';
 import Checkbox from "@material-ui/core/Checkbox";
 
-// Purpose: To render one todo.
+// Purpose: To provide a template for one todo.
 
-const TodoItemComponent = () => {
+const TodoItemComponent = (props) => {
   
   //TODO: Replace this later with the state from redux about the item being un/checked fetched from db
   //TODO: text content rendered between <span> will become a for loop
@@ -20,25 +19,21 @@ const TodoItemComponent = () => {
 
   return (
     <div className={styles.TodoItemComponent} data-testid="TodoItemComponent">
-        <Box display="flex" 
-          justifyContent="center" 
-          alignItems="center"
-          p={1}>
 
-          <Checkbox
-            checked={checkedState}
-            onChange={handleChange}
-            inputProps={{ 'aria-label': 'primary checkbox' }}
-          />
+      <Checkbox
+        checked={checkedState}
+        onChange={handleChange}
+        inputProps={{ 'aria-label': 'primary checkbox' }}
+        itemID={props.todoId}
+      />
+      
+      {/* note content */}
+      <span 
+        className={checkedState === true ? styles.checked : null}
+        onClick={() => setChecked(!checkedState)}>
+        {props.todoText}
+      </span>
           
-          {/* note content */}
-          <span 
-            className={checkedState == true ? styles.checked : null}
-            onClick={() => setChecked(!checkedState)}>
-            complete todo app
-          </span>
-          
-        </Box>
     </div>
   );
 };
